@@ -1,11 +1,9 @@
 fn main() {
-    println!("Hello, world!");
-    tellme('h');
+    let reference_to_nothing = dangle();
+    print!("{},", reference_to_nothing)
 }
 
-fn tellme(name: char) {
-    println!("{},你好", name);
-    let mut x = 8;
-    x = 9;
-    println!("{}", x)
+fn dangle() -> String {
+    let s = String::from("hello");
+    s
 }
